@@ -20,8 +20,13 @@ p {
 #top-bars {
 	width: 1024px;
 	height: 130px;
-	background: linear-gradient(RGB(232,232,232),RGB(255,255,255));
+	background: linear-gradient(RGB(232,232,232),RGB(255,255,255)38%,RGB(255,255,255)42%,RGB(244,244,244)100%);
 }
+
+	#top-bars img,#top-bars h4 {
+		display: inline;
+		vertical-align: top;
+	}
 
 	#top-bars p {
 		margin-left: 335px;
@@ -38,42 +43,44 @@ p {
 	a {
 		text-decoration: none;
 		color: RGB(102,102,102);
-		font-size: 0.75em;
+		font-size: 0.65em;
 		font-weight: bold;
 	}
 
 	ul {
+		height: 30px;
+		padding-left: 40px;
 		border-top: solid RGB(153,153,153) 1px;
 		background: linear-gradient(RGB(243,246,247),RGB(231,236,239)37%,RGB(214,221,227)42%,RGB(238,241,244)100%);
 	}
 
 		li {
 			display: inline-block;
-			padding: 11px 20px;
+			padding: 0px 20px;
+			line-height: 30px;
+			border-left: groove RGB(255,255,255) 2px;
 		}
 
+		li:last-child {
+			border-right: groove RGB(255,255,255) 2px;
+		}
+			/*Tiny down arrows in navbar*/
+			#top-bars li img {
+				margin: 5px -20px 0px 5px;
+			}
+
+/*Opaque background gradient*/
 #black-background {
 	width: 1024px;
 	height: 581px;
-	background: linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0.8),rgba(0,0,0,1));
-
+	background: radial-gradient(at 55% 20%,RGBA(60,60,58,0.8),rgba(0,0,0,0.8)50%);
 }
-
-	#black-background img{
-		opacity: 0;
-	}
-
+/*Textured background image*/
 #second-bg {
 	position:relative; top:-581px;
-	opacity: .8;
 	z-index: -1;
 }
-
-#top-bars img,#top-bars h4 {
-	display: inline;
-	vertical-align: top;
-}
-
+/*Part atop the dark background*/
 #main {
 	z-index: 1;
 	position:relative; top:-1162px;
@@ -86,25 +93,75 @@ p {
 		display: inline-block;
 	}
 
-
-
-#about {
-	width: 550px;
-	height: 265px;
-	display: inline-block;
-	background-color: rgba(255,255,255,0.3);
-	vertical-align: top;
-}
-
-	#about p {
-		font-size: 0.8em;
+	#main>p {
+		color: RGB(154,153,95);
+		padding: 0px;
+		vertical-align: top;
+		height: 32px;
 	}
 
-.white-box {
-	width: 222px;
-	height: 250px;
-	background-color: white;
-	display: inline-block;
-	margin-right: 2px;
-	border: solid RGB(34,34,34) 2px;
-}
+		#main>p img {
+			padding: 8px 10px;
+		}
+
+		#main>p span {
+			vertical-align: top;
+			line-height: 30px;
+		}
+
+	#main h4 {
+		padding: 8px 14px;
+		font-size: 0.7em;
+		background: linear-gradient(RGB(250,210,63),RGB(249,208,71)52%,RGB(249,201,0)57%,RGB(252,208,54)100%);
+		font-weight: 900;
+		color: RGB(34,34,34);
+	}
+	/*ABOUT PPC LUBRICANTS whitish text box*/
+	#about {
+		width: 550px;
+		height: 265px;
+		display: inline-block;
+		background-color: rgba(255,255,255,0.3);
+		vertical-align: top;
+		color: white;
+		margin-left: 10px;
+	}
+
+		#about h3, #about p {
+			padding: 12px 20px 0px 20px;
+		}
+
+		#about p {
+			font-size: 12px;
+		}
+
+		#about h3 {
+			font-size: 1em;
+		}
+	/*4 boxes at bottom*/
+	.white-box {
+		width: 222px;
+		height: 250px;
+		background-color: white;
+		display: inline-block;
+		margin-right: 10px;
+		border: solid RGB(34,34,34) 2px;
+		vertical-align:top;
+	}
+
+		.white-box img {
+			border-top: solid RGB(34,34,34) 1px;
+		}
+
+		button {
+			background-color: RGB(253,199,0);
+			border: solid RGB(0,0,0) 2px;
+			margin-left: 110px;
+			position: absolute;
+			bottom: 25px;
+			font-size: 10px;
+			font-weight: bold;
+			width: 93px;
+			height: 23px;
+			border-top-right-radius: 15px;
+		}
